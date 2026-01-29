@@ -10,7 +10,7 @@ export default function DeleteBook() {
   const {enqueueSnackbar}=useSnackbar()
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:5555/book/delete/${id}`)
+    axios.delete("https://bookstore-a7qg.onrender.com")
       .then(() => {
         enqueueSnackbar('book deleted succesfully',{variant:'success'})
         navigate('/');
@@ -23,7 +23,7 @@ export default function DeleteBook() {
 
   // Fetch the book details
   useEffect(() => {
-    axios.get(`http://localhost:5555/book/list/${id}`)
+    axios.get("https://bookstore-a7qg.onrender.com")
       .then((res) => {
         setBook(res.data.data);
       })
