@@ -21,7 +21,7 @@ export default function CreateBook() {
  }
 
  axios
- .post('http://localhost:5555/book/add',data)
+ .post("https://bookstore-a7qg.onrender.com",data)
  .then((res)=>{
   enqueueSnackbar('book created succesfully ', {variant:'success'})
       navigate('/')
