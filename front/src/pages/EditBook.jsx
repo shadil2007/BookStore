@@ -18,7 +18,7 @@ const {enqueueSnackbar}=useSnackbar()
   const { id } = useParams()
 
   useEffect(() => {
-    axios.get(`http://localhost:5555/book/list/${id}`)
+    axios.get("https://bookstore-a7qg.onrender.com")
       .then((res) => {
         console.log(res.data)
         setTitle(res.data.data.title||'')
@@ -40,7 +40,7 @@ const {enqueueSnackbar}=useSnackbar()
     }
 
     axios
-      .put(`http://localhost:5555/book/edit/${id}`, data)
+      .put("https://bookstore-a7qg.onrender.com", data)
       .then((res) => {
 
         enqueueSnackbar('book edited succesfully',{variant:'success'})
