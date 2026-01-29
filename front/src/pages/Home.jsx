@@ -23,7 +23,7 @@ export default function Home() {
     useEffect(() => {
        
         axios
-        .get ('http://localhost:5555/book/list') 
+        .get ('https://bookstore-a7qg.onrender.com') 
             .then((res) => {
                 setBook(res.data.data)
                 console.log(res.data.data)
